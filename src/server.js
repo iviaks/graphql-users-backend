@@ -14,7 +14,12 @@ const StartServer = async () => {
 	);
 	const schema = makeExecutableSchema({ typeDefs, resolvers });
 
-	const server = new ApolloServer({ schema, cors: true });
+	const server = new ApolloServer({
+		schema,
+		cors: true,
+		debug: true,
+		playground: true,
+	});
 
 	await UserModel.sync({ force: true });
 
