@@ -19,6 +19,7 @@ const StartServer = async () => {
 		cors: true,
 		debug: true,
 		playground: true,
+		introspection: true,
 	});
 
 	await UserModel.sync({ force: true });
