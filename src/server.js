@@ -14,11 +14,11 @@ const StartServer = async () => {
 	);
 	const schema = makeExecutableSchema({ typeDefs, resolvers });
 
-	const server = new ApolloServer({ schema });
+	const server = new ApolloServer({ schema, cors: true });
 
 	await UserModel.sync({ force: true });
 
-	return server.listen();
+	return server.listen({ port: process.env.PORT || 400 });
 };
 
 StartServer().then(({ url }) => {
