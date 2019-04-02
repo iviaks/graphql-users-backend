@@ -24,7 +24,7 @@ const StartServer = async () => {
 
 	await UserModel.sync({ force: true });
 
-	return server.listen({ port: process.env.PORT || 400 });
+	return server.listen({ port: process.env.PORT || 4000 });
 };
 
 StartServer().then(({ url }) => {
