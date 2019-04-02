@@ -1,0 +1,17 @@
+input UserFilterInput {
+	firstName: String
+	lastName: String
+	username: String
+}
+
+input UserCreateInput {
+	username: String!
+	password: String!
+	firstName: String
+	lastName: String
+}
+
+input UserUpdateInput {
+	firstName: String
+	lastName: String
+}

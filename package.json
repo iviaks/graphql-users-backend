@@ -1,0 +1,22 @@
+{
+  "name": "graphql-users-backend",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:iviaks/graphql-users-backend.git",
+  "author": "Max Saykov <max-saykov@mail.ru>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "bcrypt": "^3.0.5",
+    "graphql": "^14.2.1",
+    "graphql-import": "^0.7.1",
+    "graphql-tools": "^4.0.4",
+    "nodemon": "^1.18.10",
+    "pg": "^7.9.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^5.2.9"
+  },
+  "scripts": {
+    "watch": "nodemon src/server.js"
+  }
+}

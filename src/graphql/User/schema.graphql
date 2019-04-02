@@ -1,0 +1,13 @@
+# import UserFilterInput, UserCreateInput, UserUpdateInput from './inputs.graphql'
+# import User, UserResponseType from './types.graphql'
+
+type Query {
+	users(filters: UserFilterInput): [User]!
+	user(id: ID!): User
+}
+
+type Mutation {
+	createUser(input: UserCreateInput!): UserResponseType!
+	updateUser(id: ID!, input: UserUpdateInput!): UserResponseType!
+	deleteUser(id: ID!): UserResponseType!
+}

@@ -1,0 +1,19 @@
+version: '3'
+services:
+  graphql-backend:
+    image: node:10
+    command: yarn watch
+    volumes:
+      - ./:/var/www/graphql-backend
+    working_dir: /var/www/graphql-backend
+    ports:
+      - 4000:4000
+    environment:
+      - DATABASE_URL=postgres://pguser:password@graphql-database:5432/database
+
+  graphql-database:
+    image: postgres:10
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=pguser
+      - POSTGRES_DB=database
